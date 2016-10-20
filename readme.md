@@ -1,5 +1,4 @@
-# Project 3 - Developers Best Friend
-## for CSCI-E15 (DWA) (same as p2.com)
+# Project 3 - Developers Best Friend for CSCI-E15 (DWA)
 
 ## Live URL
 <http://p3.troubleU.com>
@@ -26,13 +25,12 @@ No login required.
 
 Final Note:
 
-## Outside code
+### Outside code
 * NA
 
 
 
-
-## Laravel Version Info
+### Laravel Version Info
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
 [![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
