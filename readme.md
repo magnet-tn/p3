@@ -1,6 +1,6 @@
 # Project 3 - Developers Best Friend for CSCI-E15 (DWA)
 
-![TroubleU Logo](logo.png)
+![TroubleU Logo](logo-redux.png)
 
 ## Live URL
 <http://p3.troubleU.com>
