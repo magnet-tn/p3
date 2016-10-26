@@ -231,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        //'Random' => 'Rych\Random\Random', //this doesn't seem to work
 
     ],
 
