@@ -11,6 +11,16 @@
 |
 */
 
+
+/**
+* Development related
+* Log Viewer - Package loaded for a nice log viewing package
+*/
+# Make it so the logs can only be seen locally
+if(App::environment() == 'local') {
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+}
+
 Route::get('/', function () {
     return view('welcome');
 });
