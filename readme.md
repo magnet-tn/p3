@@ -4,7 +4,7 @@
 <http://p3.troubleU.com>
 
 ## Description
-This repository holds developer tools including a lorem ipsum generating and a users generating application.
+This repository is for and app called DevelopersBF. DevelopersBF has developer tools including a lorem ipsum generating and a users generating application.
 
 The application will produce ... The application accepts the following user input to create lorem ipsum text:
 
