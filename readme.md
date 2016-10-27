@@ -8,13 +8,13 @@ DevelopersBF <http://p3.troubleU.com>
 ## Description
 This repository contains the code for an app called DevelopersBF. DevelopersBF has tools for dynamica web application developers including a lorem ipsum text generator and a users data generator.
 
-### lorem ipsum generator
+#### Lorem Ipsum Generator
 Produces lorem ipsum text in word, sentence and paragraph lengths. The application accepts the following user input to create lorem ipsum text:
 
 - text options: word, sentence, or paragraphs
 - number of paragraphs (if paragraph option is selected)
 
-### user data generator
+#### User Data Generator
 Produces several user object properties. The application accepts the following user input to create a users:
 
 - number of unique users
