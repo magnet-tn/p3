@@ -1,21 +1,24 @@
-# Project 3 - Developers Best Friend for CSCI-E15 (DWA)
+# Project 3 - Developers BF for CSCI-E15 (DWA)
 
 ![TroubleU Logo](logo-redux.png)
 
 ## Live URL
-<http://p3.troubleU.com>
+DevelopersBF <http://p3.troubleU.com>
 
 ## Description
-This repository is for and app called DevelopersBF. DevelopersBF has developer tools including a lorem ipsum generating and a users generating application.
+This repository contains the code for an app called DevelopersBF. DevelopersBF has tools for dynamica web application developers including a lorem ipsum text generator and a users data generator.
 
-The application will produce ... The application accepts the following user input to create lorem ipsum text:
+### lorem ipsum generator
+Produces lorem ipsum text in word, sentence and paragraph lengths. The application accepts the following user input to create lorem ipsum text:
 
-- number of paragraphs
-- words per paragraph
+- text options: word, sentence, or paragraphs
+- number of paragraphs (if paragraph option is selected)
 
-The application will produce ... The application accepts the following user input to create test users:
+### user data generator
+Produces several user object properties. The application accepts the following user input to create a users:
 
 - number of unique users
+- property options: gender, date of birth, and a sentence of bio (as ipsum lorem)
 
 I hope you enjoy the application.
 
