@@ -30,32 +30,31 @@ Final Note:
 ## Outside code
 There are several packages used to make DevelopersBF work:
 
-*#### Susan Buck's Foobooks.css from Foobooks class example
+#### Susan Buck's Foobooks.css from Foobooks class example
+* <https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
+* In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
 
-<https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
-In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
+#### Rych Random Data Library
 
-* #### Rych Random Data Library
+* <https://github.com/rchouinard/rych-random>
+* This package generates random strings or integers.
 
-<https://github.com/rchouinard/rych-random>
-This package generates random strings or integers.
-
-* #### Joshtronic PHP-loremIpsum
+#### Joshtronic PHP-loremIpsum
 
 <https://github.com/joshtronic/php-loremipsum>
 This package generates Lorem Ipsum text at the word, sentence and paragraph level.
 
-* #### Milligram CSS Framework
+#### Milligram CSS Framework
 
 <https://milligram.github.io>
 This framework provides minimalist CSS styling via CDN
 
-* #### Laravel Debugbar by barryvdh
+#### Laravel Debugbar by barryvdh
 
 <https://github.com/barryvdh/laravel-debugbar>
 Presents live debug information. Used in development only. This package is not enabled for production.
 
-* #### Log Viewer
+#### Log Viewer
 
 <https://github.com/rap2hpoutre/laravel-log-viewer>
 Simple log reporting GUI.
