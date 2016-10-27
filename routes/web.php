@@ -12,10 +12,14 @@
 */
 
 # Show a form to create lorem ipsum text
-Route::get('/lorem', 'LoremIpsumController@index')->name('lorem.index');
+Route::get('/lorem', 'LoremIpsumController@create')->name('lorem.create');
 
 # Show a form to create user information
-Route::get('/user', 'UserController@index')->name('user.index');
+Route::get('/user', 'UserController@create')->name('user.create');
+
+# Show a test user information
+Route::get('/generateusers', 'UserController@generateUsers')->name('generateusers');
+
 
 
 /**

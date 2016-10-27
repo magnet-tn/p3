@@ -28,7 +28,10 @@ No login required.
 Final Note:
 
 ## Outside code
-* NA
+* There are several packages used to make DevelopersBF work:
+### Rych Random Data Library <https://github.com/rchouinard/rych-random>
+### Milligram CSS Framework <https://milligram.github.io>
+### Joshtronic PHP-loremIpsum <https://github.com/joshtronic/php-loremipsum>
 
 
 
