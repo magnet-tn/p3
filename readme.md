@@ -40,24 +40,20 @@ There are several packages used to make DevelopersBF work:
 * This package generates random strings or integers.
 
 #### Joshtronic PHP-loremIpsum
-
-<https://github.com/joshtronic/php-loremipsum>
-This package generates Lorem Ipsum text at the word, sentence and paragraph level.
+* <https://github.com/joshtronic/php-loremipsum>
+* This package generates Lorem Ipsum text at the word, sentence and paragraph level.
 
 #### Milligram CSS Framework
-
-<https://milligram.github.io>
-This framework provides minimalist CSS styling via CDN
+* <https://milligram.github.io>
+* This framework provides minimalist CSS styling via CDN
 
 #### Laravel Debugbar by barryvdh
-
-<https://github.com/barryvdh/laravel-debugbar>
-Presents live debug information. Used in development only. This package is not enabled for production.
+* <https://github.com/barryvdh/laravel-debugbar>
+* Presents live debug information. Used in development only. This package is not enabled for production.
 
 #### Log Viewer
-
-<https://github.com/rap2hpoutre/laravel-log-viewer>
-Simple log reporting GUI.
+* <https://github.com/rap2hpoutre/laravel-log-viewer>
+* Simple log reporting GUI.
 
 #### Laravel Version Info
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
@@ -67,5 +63,4 @@ Simple log reporting GUI.
 [![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
 #### License
-
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
