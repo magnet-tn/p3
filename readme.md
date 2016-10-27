@@ -5,6 +5,7 @@
 ## Live URL
 DevelopersBF <http://p3.troubleU.com>
 
+
 ## Description
 This repository contains the code for an app called DevelopersBF. DevelopersBF has tools for dynamica web application developers including a lorem ipsum text generator and a users data generator.
 
@@ -25,10 +26,10 @@ I hope you enjoy the application.
 ## Demo
 <http://www.screencast.com/t/7ZTd7vl2pjrs>
 
+
 ## Details for teaching team
 No login required.
 
-Final Note:
 
 ## Outside code
 There are several packages used to make DevelopersBF work:
