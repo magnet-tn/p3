@@ -29,11 +29,24 @@ Final Note:
 
 ## Outside code
 * There are several packages used to make DevelopersBF work:
-### Rych Random Data Library <https://github.com/rchouinard/rych-random>
-### Milligram CSS Framework <https://milligram.github.io>
-### Joshtronic PHP-loremIpsum <https://github.com/joshtronic/php-loremipsum>
 
+#### Susan Buck .css from Foobooks class example <https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
 
+    In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
+
+#### Rych Random Data Library <https://github.com/rchouinard/rych-random>
+
+    This package generates random strings or integers.
+
+#### Joshtronic PHP-loremIpsum <https://github.com/joshtronic/php-loremipsum>
+    This package generates Lorem Ipsum text at the word, sentence and paragraph level.
+
+#### Milligram CSS Framework <https://milligram.github.io>
+    This framework provides minimalist CSS styling via CDN
+
+#### Debugbar
+
+#### Log Viewer
 
 #### Laravel Version Info
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
