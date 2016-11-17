@@ -7,37 +7,68 @@
 @endsection
 
 @section('content')
-    <h2>Choose what unit of text is needed</h2>
-    <form method='POST' action='/lorem'>
 
-        {{ csrf_field() }}
-        <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
+	<div class="row">
 
-        <label>
-            <input name="address" type="radio"> Paragraph
-        </label>
+        <div class="col-md-4">
 
-        <label>
-            <input name="address" type="radio"> Sentence
-        </label>
+            <h2>Select which unit of text is needed</h2>
+            <form method='POST' action='/lorem'>
 
-        <label>
-            <input name="address" type="radio"> Word
-        </label>
+                {{ csrf_field() }}
+                <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-        <label>Choose how many text units to generate (max 20):
-            <input type='integer' name='numberOfLoremUnits' value='{{ old("numberOfLoremUnits") }}'>
-        </label></br>
+                <label>
+                    <input name="address" type="radio"> Paragraph
+                </label>
 
-        <input type='submit' value='Generate Text'>
+                <label>
+                    <input name="address" type="radio"> Sentence
+                </label>
 
-        @if(count($errors) > 0)
-            <ul>
-                @foreach($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        @endif
+                <label>
+                    <input name="address" type="radio"> Word
+                </label>
 
-    </form>
+                <label>How many units of text? (max 20):
+                    <input type='integer' id='numberOfLoremUnits' name='numberOfLoremUnits' value='{{ old("numberOfLoremUnits") }}' min="1" max="20">
+                </label></br>
+
+                <input type='submit' value='Generate Text'>
+
+                @if(count($errors) > 0)
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
+            </form>
+        </div>
+
+        <div class="col-md-8">
+            @if(isset($loremUnits))
+                <div id="Users">
+                    @foreach($users as $user)
+                        <p class="user full">{{ $user['name'] }}
+                        <p>{{ $user['username'] }}</p>
+                        @if(isset($user['gender']))
+                            <p class="gender">{{ $user['gender']}}</p>
+                        @endif
+                        @if(isset($user['dob']))
+                            <p>{{ $user['dob'] }}</p>
+                        @endif
+                        @if(isset($user['password']))
+                            <p>{{ $user['password'] }}<br>
+                        @endif
+                        @if(isset($user['phone']))
+                            <p>{{ $user['phone']}}</p>
+                        @endif
+                    @endforeach
+                </div>
+            @endif
+        </div>
+
+    </div>
+
 @endsection
