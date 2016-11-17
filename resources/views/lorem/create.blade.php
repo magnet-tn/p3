@@ -19,15 +19,15 @@
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
                 <label>
-                    <input name="address" type="radio"> Paragraph
+                    <input name="paragraph" type="radio"> Paragraph
                 </label>
 
                 <label>
-                    <input name="address" type="radio"> Sentence
+                    <input name="sentence" type="radio"> Sentence
                 </label>
 
                 <label>
-                    <input name="address" type="radio"> Word
+                    <input name="word" type="radio"> Word
                 </label>
 
                 <label>How many units of text? (max 20):
@@ -48,24 +48,11 @@
 
         <div class="col-md-8">
             @if(isset($loremUnits))
-                <div id="Users">
-                    @foreach($users as $user)
-                        <p class="user full">{{ $user['name'] }}
-                        <p>{{ $user['username'] }}</p>
-                        @if(isset($user['gender']))
-                            <p class="gender">{{ $user['gender']}}</p>
-                        @endif
-                        @if(isset($user['dob']))
-                            <p>{{ $user['dob'] }}</p>
-                        @endif
-                        @if(isset($user['password']))
-                            <p>{{ $user['password'] }}<br>
-                        @endif
-                        @if(isset($user['phone']))
-                            <p>{{ $user['phone']}}</p>
-                        @endif
+                <div id="lorem text">
+                    @foreach($loremUnits as $loremUnit)
+                        <p>{{ $loremUnit }}</p>
                     @endforeach
-                </div>
+            </div>
             @endif
         </div>
 

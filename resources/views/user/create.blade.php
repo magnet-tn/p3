@@ -53,13 +53,24 @@
         </div>
 
         <div class="col-md-8">
-            @if(isset($loremUnits))
-                <div id="lorem text">
-                    @foreach($loremUnits as $loremUnit)
-                        <p>{{ $loremUnit }}</p>
-                    @endforeach
+            <div id="Users">
+                @foreach($users as $user)
+                    <p class="user full">{{ $user['name'] }}
+                    <p>{{ $user['username'] }}</p>
+                    @if(isset($user['gender']))
+                        <p class="gender">{{ $user['gender']}}</p>
+                    @endif
+                    @if(isset($user['dob']))
+                        <p>{{ $user['dob'] }}</p>
+                    @endif
+                    @if(isset($user['password']))
+                        <p>{{ $user['password'] }}<br>
+                    @endif
+                    @if(isset($user['phone']))
+                        <p>{{ $user['phone']}}</p>
+                    @endif
+                @endforeach
             </div>
-            @endif
         </div>
 
     </div>
