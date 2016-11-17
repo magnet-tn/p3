@@ -3,6 +3,7 @@
 namespace DevelopersBF\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \joshtronic;
 
 class LoremIpsumController extends Controller
 {
@@ -13,20 +14,33 @@ class LoremIpsumController extends Controller
      * It shows, roughly, what a controller action for your P3 might look like
      * It is not at all related to the Book resource.
  	*/
-     public function getLoremIpsumText(Request $request)
+    public function testLorem($qty)
+    {
+
+        # Generate the lorem ipsum text
+        $howManyUnits = $qty;
+        $lorem = new joshtronic\LoremIpsum();
+        $text = $lorem->sentences($qty,'p');
+        echo $qty.' sentences: ' . $text;
+    }
+
+
+
+     public function generateLorem(Request $request)
      {
 
          # Validate the request....
 
          # Generate the lorem ipsum text
-         $howManyParagraphs = $request->input('howManyParagraphs');
-
+         $howManyUnits = $request->input('qty');
+         $textStyle = $request->input('textStyle');
          # Logic...
-         $loremenator = \SBuck\Loremenator();
-         $text = $loremenator->getParagraphs($howManyParagraphs);
-
-         # Display the results...
-         return view('lorem')->with(['text', $text]);
+         $lorem = new joshtronic\LoremIpsum();
+         $text = $lorem->sentences($howManyUnits);
+         echo '4 sentences: ' . $text;
+        //
+        //  # Display the results...
+        //  return view('lorem')->with(['text', $text]);
 
      }
 

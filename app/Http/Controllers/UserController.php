@@ -18,6 +18,33 @@ class UserController extends Controller
     /**
     *
     */
+    public function testUsers() {
+        $numberOfUsers = 7;
+        $count = 0;
+        for ($j = 0; $j < 8; $j++){
+            $gen = new \RandomUser\Generator();
+            $user = $gen->getUser();
+            if($count==$numberOfUsers){
+                break;
+            } else {
+                if(ctype_alpha ( $user->getFirstName() )){
+                    echo $user->getFirstName(). ' ';
+                    $count++;
+                } else{
+                    continue;
+                }
+                echo $user->getLastName() . ', ';
+                // need to check for flags of what user info is sought
+                //if (genderFlag){ setGender; } .....
+                echo $user->getGender() . ', ';
+                echo $user->getDateOfBirth() . ', '; //need to format this
+                echo $user->getUsername() . ', ';
+                echo $user->getSalt() . '<br>';
+
+                //add lorem ipsum bio sentence about user
+            }
+        }
+    }
     public function generateUsers() {
         $numberOfUsers = 7;
         $count = 0;
