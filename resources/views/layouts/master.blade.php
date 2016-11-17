@@ -14,6 +14,7 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.css' rel='stylesheet'>
     <link href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/lumen/bootstrap.min.css' rel='stylesheet'>
 
+    <link href="/css/app.css" type='text/css' rel='stylesheet'>
     <link href="/css/developersBF.css" type='text/css' rel='stylesheet'>
     <link rel="icon" type="image/png" href="img/TroubleU-icon.png">
 
@@ -22,28 +23,29 @@
 
 </head>
 <body>
-    <section>
-        {{-- Page headline will be yielded here --}}
-        @yield('headline')
-    </section>
+    <div class='pageTop'>
+        <section>
+            {{-- Page headline will be yielded here --}}
+            @yield('headline')
+        </section>
 
-    <header>
-        <a href='/'>
-        <img
-        src='/img/logo.png'
-        alt='TroubleU Logo'
-        width='100px'
-        class='logo'>
-        </a>
-    </header>
+        <header>
+            <a href='/'>
+            <img
+            src='/img/logo.png'
+            alt='TroubleU Logo'
+            width='100px'
+            class='logo'>
+            </a>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href='/lorem'>go to lorem ipsum generator</a></li>
-            <li><a href='/user'>go to user generator</a></li>
-        </ul>
-    </nav>
-
+        <nav>
+            <ul>
+                <li><a href='/lorem'>go to lorem ipsum generator</a></li>
+                <li><a href='/user'>go to user generator</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section>
         {{-- Main page content will be yielded here --}}
