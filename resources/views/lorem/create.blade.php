@@ -7,8 +7,22 @@
     <form method='POST' action='/lorem'>
 
         {{ csrf_field() }}
+        <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-        Paragraphs: <input type='integer' name='numberOfParagraphs' value='{{ old("numberOfParagraphs") }}'>
+        <label>How many?: </label>
+        <input type='integer' name='numberOfLoremUnits' value='{{ old("numberOfLoremUnits") }}'>
+
+        <label>
+            <input name="address" type="radio"> Paragraph
+        </label>
+
+        <label>
+            <input name="address" type="radio"> Sentence
+        </label>
+
+        <label>
+            <input name="address" type="radio"> Word
+        </label>
 
         <input type='submit' value='Generate Text'>
 

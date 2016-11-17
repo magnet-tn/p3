@@ -3,14 +3,34 @@
 @section('title', 'User Data Generator')
 
 @section('content')
-    <h1>Choose user qty</h1>
+    <h1>Random User Generator</h1>
+    <p>Choose how many users to generate</p>
     <form method='POST' action='/user'>
 
         {{ csrf_field() }}
+        <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-        Users: <input type='integer' name='numberOfUsers' value='{{ old("numberOfUsers") }}'>
+        <label>Users: </label>
+        <input type='integer' name='numberOfUsers' value='{{ old("numberOfUsers") }}'>
+
+        <label>
+            <input name="address" type="checkbox"> Gender
+        </label>
+
+        <label>
+            <input name="address" type="checkbox"> Date of Birth
+        </label>
+
+        <label>
+            <input name="address" type="checkbox"> Username
+        </label>
+
+        <label>
+            <input name="address" type="checkbox"> Password
+        </label>
 
         <input type='submit' value='Generate Users'>
+
 
         @if(count($errors) > 0)
             <ul>

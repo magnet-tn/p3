@@ -19,7 +19,7 @@ class UserController extends Controller
     *
     */
     public function generateUsers() {
-        $numberOfUsers = 5;
+        $numberOfUsers = 7;
         $count = 0;
         for ($j = 0; $j < 8; $j++){
             $gen = new \RandomUser\Generator();
