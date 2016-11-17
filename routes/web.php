@@ -20,6 +20,8 @@ Route::get('/user', 'UserController@create')->name('user.create');
 # Show a test user information
 Route::get('/generateusers', 'UserController@generateUsers')->name('generateusers');
 
+# Show a test user information
+Route::get('/generatelorem', 'UserController@generateLorem')->name('generatelorem');
 
 
 /**
