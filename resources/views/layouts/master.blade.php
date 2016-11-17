@@ -22,13 +22,17 @@
 
 </head>
 <body>
+    <section>
+        {{-- Page headline will be yielded here --}}
+        @yield('headline')
+    </section>
 
     <header>
         <a href='/'>
         <img
         src='/img/logo.png'
         alt='TroubleU Logo'
-        width='300px'
+        width='100px'
         class='logo'>
         </a>
     </header>
