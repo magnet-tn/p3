@@ -14,14 +14,14 @@
 # Show a form to create lorem ipsum text
 Route::get('/lorem', 'LoremIpsumController@create')->name('lorem.create');
 
-// # Show a lorem text
-// Route::post('/generatelorem', 'LoremIpsumController@generateLorem')->name('generatelorem');
+# Show a lorem text
+Route::post('/generatelorem', 'LoremIpsumController@generateLorem')->name('generatelorem');
 
 # Show a form to create user information
 Route::get('/user', 'UserController@create')->name('user.create');
 
-// # Show a test user information
-// Route::post('/generateusers', 'UserController@generateUsers')->name('generateusers');
+# Show a test user information
+Route::post('/generateusers', 'UserController@generateUsers')->name('generateusers');
 
 # Show a test user information
 Route::get('/testusers', 'UserController@testUsers')->name('testusers');

@@ -34,22 +34,9 @@ No login required.
 ## Outside code
 There are several packages used to make DevelopersBF work:
 
-#### Susan Buck's Foobooks.css from Foobooks class example
-* <https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
-* In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
-
-#### Rych Random Data Library
-
-* <https://github.com/rchouinard/rych-random>
-* This package generates random strings or integers.
-
 #### Joshtronic PHP-loremIpsum
 * <https://github.com/joshtronic/php-loremipsum>
 * This package generates Lorem Ipsum text at the word, sentence and paragraph level.
-
-#### Milligram CSS Framework
-* <https://milligram.github.io>
-* This framework provides minimalist CSS styling via CDN
 
 #### Laravel Debugbar by barryvdh
 * <https://github.com/barryvdh/laravel-debugbar>
@@ -58,6 +45,23 @@ There are several packages used to make DevelopersBF work:
 #### Log Viewer
 * <https://github.com/rap2hpoutre/laravel-log-viewer>
 * Simple log reporting GUI.
+
+#### Milligram CSS Framework
+* <https://milligram.github.io>
+* This framework provides minimalist CSS styling via CDN
+
+#### RandomUser API
+* <https://randomuser.me>
+* This package/API generates various fields of random data for users.
+
+#### Rych Random Data Library
+
+* <https://github.com/rchouinard/rych-random>
+* This package generates random strings or integers.
+
+#### Susan Buck's Foobooks.css from Foobooks class example
+* <https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
+* In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
 
 #### Laravel Version Info
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)

@@ -37,9 +37,11 @@ class UserController extends Controller
                 // need to check for flags of what user info is sought
                 //if (genderFlag){ setGender; } .....
                 echo $user->getGender() . ', ';
-                echo $user->getDateOfBirth() . ', '; //need to format this
+                echo $user->getDateOfBirth() . '<br>'; //need to format this
                 echo $user->getUsername() . ', ';
-                echo $user->getSalt() . '<br>';
+                echo $user->getPhone() . ', ';
+                echo $user->getRegistered() . ', ';
+                echo $user->getSalt() . '<br><br>';
 
                 //add lorem ipsum bio sentence about user
             }
