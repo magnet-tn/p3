@@ -44,8 +44,7 @@ class LoremIpsumController extends Controller
 
      }
 
-    public function create()
-    {
+    public function create() {
         return view('lorem.create'); //->with(['text', $text]);
         //return 'lorem ipsum form goes here';
     }

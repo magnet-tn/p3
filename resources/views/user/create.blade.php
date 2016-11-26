@@ -12,30 +12,31 @@
 
         <div class="col-md-4">
 
+
             <h2>Select Data to Include</h2>
             <p>Choose how many users to generate</p>
-            <form method='POST' action='/user'>
+            <form method='POST' action='/generateusers'>
 
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-                <label>Users: (max 200)
-                    <input type='integer' name='numberOfUsers' value='{{ old("numberOfUsers") }}' min="1" max="200">
+                <label for="users">Users: (max 200)
+                    <input type='integer' name='userQty' value='{{ old("userQty") }}' min="1" max="200">
                 <label>
                 <label>
-                    <input name="address" type="checkbox"> Gender
+                    <input name="gender" type="checkbox"> Gender
                 </label>
 
                 <label>
-                    <input name="address" type="checkbox"> Date of Birth
+                    <input name="dob" type="checkbox"> Date of Birth
                 </label>
 
                 <label>
-                    <input name="address" type="checkbox"> Username
+                    <input name="userName" type="checkbox"> Username
                 </label>
 
                 <label>
-                    <input name="address" type="checkbox"> Password
+                    <input name="password" type="checkbox"> Password
                 </label></br>
 
                 <input type='submit' value='Generate Users'>
@@ -51,7 +52,7 @@
 
             </form>
         </div>
-
+    {{--
         <div class="col-md-8">
             <div id="Users">
                 @foreach($users as $user)
@@ -72,6 +73,7 @@
                 @endforeach
             </div>
         </div>
+    --}}
 
     </div>
 

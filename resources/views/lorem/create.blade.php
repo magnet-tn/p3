@@ -13,7 +13,7 @@
         <div class="col-md-4">
 
             <h2>Select which unit of text is needed</h2>
-            <form method='POST' action='/lorem'>
+            <form method='POST' action='/generatelorem'><!-- action was 'lorem' -->
 
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
