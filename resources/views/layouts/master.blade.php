@@ -29,22 +29,32 @@
             @yield('headline')
         </section>
 
-        <header>
-            <a href='/'>
-            <img
-            src='/img/logo.png'
-            alt='TroubleU Logo'
-            width='100px'
-            class='logo'>
-            </a>
-        </header>
+        <div class="row">
+            <div class="col-md-1">
+                <header>
+                    <a href='/'>
+                    <img
+                    src='/img/logo.png'
+                    alt='TroubleU Logo'
+                    width='100px'
+                    class='logo'>
+                    </a>
+                </header>
+            </div>
 
-        <nav>
-            <ul>
-                <li><a href='/lorem'>go to lorem ipsum generator</a></li>
-                <li><a href='/user'>go to user generator</a></li>
-            </ul>
-        </nav>
+            <div class="col-md-6">
+                <nav>
+                    <ul>
+                        <div class="row">
+                            <li><a href='/lorem'>go to Lorem Ipsum Generator</a></li>
+                        </div>
+                        <div class="row">
+                            <li><a href='/user'>go to Random User Generator</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 
     <section>
