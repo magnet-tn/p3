@@ -15,7 +15,7 @@
 Route::get('/lorem', 'LoremIpsumController@create')->name('lorem.create');
 
 # Show lorem text
-Route::post('/generatelorem', 'LoremIpsumController@generateLorem')->name('generatelorem');
+Route::post('/lorem', 'LoremIpsumController@generateLorem');
 
 # Show a form to create user information
 Route::get('/user', 'UserController@create')->name('user.create');
@@ -27,7 +27,7 @@ Route::post('/user', 'UserController@generateUsers');
 # Route::get('/testusers', 'UserController@testUsers')->name('testusers');
 
 # Show a test lorem text
-Route::get('/testlorem/{qty}', 'LoremIpsumController@testLorem')->name('testlorem');
+Route::get('/testlorem/{qty}/{type}', 'LoremIpsumController@testLorem')->name('testlorem');
 
 
 /**
