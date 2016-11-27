@@ -23,8 +23,8 @@ Route::get('/user', 'UserController@create')->name('user.create');
 # Show user information
 Route::post('/generateusers', 'UserController@generateUsers')->name('generateusers');
 
-# Show a test user information
-Route::get('/testusers', 'UserController@testUsers')->name('testusers');
+# Show a test user information - commented out for final
+# Route::get('/testusers', 'UserController@testUsers')->name('testusers');
 
 # Show a test lorem text
 Route::get('/testlorem/{qty}', 'LoremIpsumController@testLorem')->name('testlorem');

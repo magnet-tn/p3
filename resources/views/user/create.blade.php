@@ -23,6 +23,11 @@
                 <label for="users">Users: (max 200)
                     <input type='integer' name='userQty' value='{{ old("userQty") }}' min="1" max="200">
                 <label>
+
+                <label>
+                    <input name="address" type="checkbox"> Address
+                </label>
+
                 <label>
                     <input name="gender" type="checkbox"> Gender
                 </label>
@@ -52,7 +57,7 @@
 
             </form>
         </div>
-    {{--
+    {{-- commented out
         <div class="col-md-8">
             <div id="Users">
                 @foreach($users as $user)
