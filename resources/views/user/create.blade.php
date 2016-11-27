@@ -19,15 +19,21 @@
 
             <h2>Select Data to Include</h2>
             <p>Choose how many users to generate</p>
-            <form method='POST' action='/generateusers'>
+            <form method='POST' action='/user'>
 
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-                <label for="users">Users: (max 200)
-                    <input type='integer' name='userQty' value='{{ old("userQty") }}' min="1" max="200">
+                <label for="users">Users: (max 100)
+                    <input type='integer' name='userQty' value='{{ old("userQty") }}' min="1" max="100">
                 <label>
-
+                    @if(count($errors) > 0)
+                        <ul class="val-error">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                 <label>
                     <input name="address" type="checkbox"> Address
                 </label>
@@ -50,17 +56,10 @@
 
                 <input type='submit' value='Generate Users'>
 
-
-                @if(count($errors) > 0)
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                @endif
-
             </form>
         </div>
+
+
     {{-- commented out
         <div class="col-md-8">
             <div id="Users">

@@ -20,7 +20,7 @@ class UserController extends Controller
 
         # Validating user input
         $this->validate($request,[
-            'userQty' => 'required|integer|min:1|max:200'
+            'userQty' => 'required|integer|min:1|max:100'
         ]);
         $userQty = $request->input('userQty');
         $address = $request->input('address');
@@ -30,10 +30,11 @@ class UserController extends Controller
         $password = $request->input('password');
 
         $count = 0;
-        for ($j = 0; $j < 220; $j++){
+        for ($j = 0; $j < 120; $j++){
             $fieldFlag = false;
             $gen = new \RandomUser\Generator();
             $users = $gen->getUser();
+
             if($count==$userQty){
                 break;
             } else {
@@ -72,9 +73,14 @@ class UserController extends Controller
                     $fieldFlag = true;
                 }
                 echo '<br><br> ';
+
+
                 //add lorem ipsum bio sentence about user
             }
         }
+        // return view('user.create',[
+        //     'users' => $users,
+        // ]);
     }
     /**
      *  This was a test function to verify the RandomUsers elements Disabled for final

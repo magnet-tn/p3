@@ -21,7 +21,7 @@ Route::post('/generatelorem', 'LoremIpsumController@generateLorem')->name('gener
 Route::get('/user', 'UserController@create')->name('user.create');
 
 # Show user information
-Route::post('/generateusers', 'UserController@generateUsers')->name('generateusers');
+Route::post('/user', 'UserController@generateUsers');
 
 # Show a test user information - commented out for final
 # Route::get('/testusers', 'UserController@testUsers')->name('testusers');
