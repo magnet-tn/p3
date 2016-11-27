@@ -42,15 +42,11 @@
                 </header>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <nav>
                     <ul>
-                        <div class="row">
-                            <li><a href='/lorem'>go to Lorem Ipsum Generator</a></li>
-                        </div>
-                        <div class="row">
-                            <li><a href='/user'>go to Random User Generator</a></li>
-                        </div>
+                            <li><a href='/lorem'>&rarr; Lorem Ipsum Generator</a></li>
+                            <li><a href='/user'>&rarr; Random User Generator</a></li>
                     </ul>
                 </nav>
             </div>
