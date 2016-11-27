@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+     &nbsp; &nbsp;<a href="/">Home</a>
+
 @section('title', 'User Data Generator')
 
 @section('headline')
@@ -7,6 +9,8 @@
 @endsection
 
 @section('content')
+
+
 
     <div class="row">
 

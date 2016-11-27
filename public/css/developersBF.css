@@ -75,13 +75,14 @@ footer a:link, nav a:link {
     text-decoration:none;
 }
 
+/*
 nav ul li {
     display:inline;
-    background-color:#e00;
+    background-color:#e06;
     padding:5px;
     margin-right:5px;
 }
-
+*/
 
 /*----------------------------------------------------
 Forms

@@ -46,7 +46,7 @@ class UserController extends Controller
                 } else{
                     continue;
                 }
-                echo $fullName . '<br>';
+                echo $count. '. '. $fullName . '<br>';
                 // need to check for flags of what user info is sought
                 // if (genderFlag){ setGender; } .....
                 if ($address) {

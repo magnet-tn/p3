@@ -1,5 +1,5 @@
 @extends('layouts.master')
-
+     &nbsp; &nbsp;<a href="/">Home</a>
 @section('title', 'Lorem Ipsum Generator')
 
 @section('headline')
