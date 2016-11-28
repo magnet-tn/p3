@@ -38,7 +38,8 @@ class UserController extends Controller
         $users = array();
         $count = 0;
 
-        for ($j = 0; $j < 120; $j++){
+        for ($j = 0; $j < 120; $j++){  //loops up to 120 to allow for filtering out non-roman alphabet users.
+
             if($count==$userQty){
                 break;
             } else {
@@ -48,34 +49,31 @@ class UserController extends Controller
                     $fullName.= $rndUsers[$j]->getLastName();
                     $fullName = title_case($fullName);
                     $users[$count]['name'] = $fullName;
+                    if ($address) {
+                        $users[$count]['address'] = title_case( $rndUsers[$j]->getStreetAddress(). ' / ' .$rndUsers[$j]->getCity(). ' / ' .$rndUsers[$j]->getState(). ' / ' .$rndUsers[$j]->getZip() );
+                    }
+                    if ($gender) {
+                        $users[$count]['gender'] = $rndUsers[$j]->getGender();
+                    }
+                    if ($dob) {
+                        $users[$count]['dob'] = substr($rndUsers[$j]->getDateOfBirth(), 0, 10);
+                    }
+                    if ($username) {
+                        $users[$count]['username'] = $rndUsers[$j]->getUsername();
+                    }
+                    if ($password) {
+                        $users[$count]['password'] = $rndUsers[$j]->getSalt();
+                    }
+
+                    $users[$count]['break'] = '&nbsp;';
+                    $count++;
 
                 } else{
                     continue;
                 }
-                if ($address) {
-                    $users[$count]['address'] = title_case( $rndUsers[$j]->getStreetAddress(). ' / ' .$rndUsers[$j]->getCity(). ' / ' .$rndUsers[$j]->getState(). ' / ' .$rndUsers[$j]->getZip() );
-                }
-                if ($gender) {
-                    $users[$count]['gender'] = $rndUsers[$j]->getGender();
-                }
-                if ($dob) {
-                    $users[$count]['dob'] = substr($rndUsers[$j]->getDateOfBirth(), 0, 10);
-                    }
-                if ($username) {
-                    $users[$count]['username'] = $rndUsers[$j]->getUsername();
-                    $fieldFlag = true;
-                }
-                if ($password) {
-                    $users[$count]['password'] = $rndUsers[$j]->getSalt();
-                    $fieldFlag = true;
-                }
-                $users[$count]['break'] = '&nbsp;';
-                $count++;
-
-                //add lorem ipsum bio sentence about user
             }
         }
-//        dump($users);
+
         return view('user.create',[
             'users' => $users,
         ]);
