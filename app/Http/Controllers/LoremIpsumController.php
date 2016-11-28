@@ -21,18 +21,32 @@ class LoremIpsumController extends Controller
     public function generateLorem(Request $request)
     {
 
-         # Validate the request....
+        # Validate the request....
+        $this->validate($request,[
+            'unitQty' => 'required|integer|min:1|max:100'
+        ]);
+        $unitQty = $request->input('unitQty');
+        $unitType = $request->input('unitType');
 
-         # Generate the lorem ipsum text
-         $howManyUnits = $request->input('qty');
-         $textStyle = $request->input('textStyle');
-         # Logic...
-         $lorem = new joshtronic\LoremIpsum();
-         $text = $lorem->sentences($howManyUnits);
-         echo '4 sentences: ' . $text;
+        # Generate the lorem ipsum text
+        $lorem = new joshtronic\LoremIpsum();
+
+        if($unitType=='paragraph') {
+            $text = $lorem->paragraphs($unitQty,'p');
+            echo $unitQty.' paragraphs: ' .$text;
+        }
+        if($unitType=='sentence') {
+            $text = $lorem->sentences($unitQty,'p');
+            echo $unitQty.' sentences: ' .$text;
+        }
+        if($unitType=='word') {
+            $text = $lorem->words($unitQty,'p');
+            echo $unitQty.' words: ' .$text;
+        }
+
         //
         //  # Display the results...
-        //  return view('lorem')->with(['text', $text]);
+        return view('lorem.create')->with(['text', $text]);
 
     }
     /**

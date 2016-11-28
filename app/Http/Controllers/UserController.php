@@ -73,7 +73,7 @@ class UserController extends Controller
                 }
             }
         }
-
+        //  # Display the results...
         return view('user.create',[
             'users' => $users,
         ]);

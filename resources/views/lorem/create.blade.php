@@ -13,28 +13,20 @@
         <div class="col-md-4">
 
             <h2>Select which unit of text is needed</h2>
-            <form method='POST' action='/generatelorem'><!-- action was 'lorem' -->
+            <form method='POST' action='/lorem'><!-- action was 'lorem' -->
 
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
                 <label>
-                    <input name="paragraph" type="radio"> Paragraph
-                </label>
-
-                <label>
-                    <input name="sentence" type="radio"> Sentence
-                </label>
-
-                <label>
-                    <input name="word" type="radio"> Word
+                    <input type="radio" name="unitType" value="paragraph" checked> Paragraph
+                    <input type="radio" name="unitType" value="sentence"> Sentence
+                    <input type="radio" name="unitType" value="word"> Word
                 </label>
 
                 <label>How many units of text? (max 20):
-                    <input type='integer' id='numberOfLoremUnits' name='numberOfLoremUnits' value='{{ old("numberOfLoremUnits") }}' min="1" max="20">
+                    <input type='integer' id='unitQty' name='unitQty' value='{{ old("unitQty") }}' min="1" max="20">
                 </label></br>
-
-                <input type='submit' value='Generate Text'>
 
                 @if(count($errors) > 0)
                     <ul>
@@ -43,6 +35,10 @@
                         @endforeach
                     </ul>
                 @endif
+
+                <input type='submit' value='Generate Text'>
+
+
             </form>
         </div>
 
