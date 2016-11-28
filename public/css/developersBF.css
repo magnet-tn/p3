@@ -88,6 +88,12 @@ Forms
     list-style-type: none;
 }
 
+.fullname {
+    font-weight: bold;
+    list-style-type: none;
+}
+
+
 label {
     margin-top:10px;
     margin-bottom:0;

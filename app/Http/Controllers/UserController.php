@@ -1,4 +1,7 @@
 <?php
+/**
+ * Insert Test
+ */
 
 namespace DevelopersBF\Http\Controllers;
 
@@ -9,7 +12,7 @@ class UserController extends Controller
     /**
      *
      */
-    public function create($users = null) {
+    public function create($users = []) {
         //return 'user form goes here';
         return view('user.create')->with('users', $users);
     }
@@ -29,90 +32,105 @@ class UserController extends Controller
         $username = $request->input('username');
         $password = $request->input('password');
 
-        $count = 0;
-        for ($j = 0; $j < 120; $j++){
-            $fieldFlag = false;
-            $gen = new \RandomUser\Generator();
-            $users = $gen->getUser();
+        $gen = new \RandomUser\Generator();
+        $rndUsers = $gen->getUsers(($userQty+20));
 
+        $users = array();
+        $count = 0;
+
+        for ($j = 0; $j < 120; $j++){
             if($count==$userQty){
                 break;
             } else {
                 //filter for roman alphabet
-                if(ctype_alpha ( $users->getFirstName() )){
-                    $fullName = $users->getFirstName(). ' ';
-                    $fullName.= $users->getLastName();
+                if(ctype_alpha ( $rndUsers[$j]->getFirstName() )){
+                    $fullName = $rndUsers[$j]->getFirstName(). ' ';
+                    $fullName.= $rndUsers[$j]->getLastName();
                     $fullName = title_case($fullName);
-                    $count++;
+                    $users[$count]['name'] = $fullName;
+
                 } else{
                     continue;
                 }
-                echo $count. '. '. $fullName . '<br>';
-                // need to check for flags of what user info is sought
-                // if (genderFlag){ setGender; } .....
                 if ($address) {
-                    echo $users->getStreetAddress(). ' / ' .$users->getCity(). ' / ' .$users->getState(). ' / ' .$users->getZip() . '<br>';
+                    $users[$count]['address'] = title_case( $rndUsers[$j]->getStreetAddress(). ' / ' .$rndUsers[$j]->getCity(). ' / ' .$rndUsers[$j]->getState(). ' / ' .$rndUsers[$j]->getZip() );
                 }
                 if ($gender) {
-                    echo $users->getGender();
-                    $fieldFlag = true;
+                    $users[$count]['gender'] = $rndUsers[$j]->getGender();
                 }
                 if ($dob) {
-                    if ($fieldFlag) { echo ', ';}
-                    echo substr($users->getDateOfBirth(), 0, 10); //need to format this
-                    $fieldFlag = true;
+                    $users[$count]['dob'] = substr($rndUsers[$j]->getDateOfBirth(), 0, 10);
                     }
                 if ($username) {
-                    if ($fieldFlag) { echo ', ';}
-                    echo $users->getUsername();
+                    $users[$count]['username'] = $rndUsers[$j]->getUsername();
                     $fieldFlag = true;
                 }
                 if ($password) {
-                    if ($fieldFlag) { echo ', ';}
-                    echo $users->getSalt();
+                    $users[$count]['password'] = $rndUsers[$j]->getSalt();
                     $fieldFlag = true;
                 }
-                echo '<br><br> ';
-
+                $users[$count]['break'] = '&nbsp;';
+                $count++;
 
                 //add lorem ipsum bio sentence about user
             }
         }
-        // return view('user.create',[
-        //     'users' => $users,
-        // ]);
+//        dump($users);
+        return view('user.create',[
+            'users' => $users,
+        ]);
     }
-    /**
-     *  This was a test function to verify the RandomUsers elements Disabled for final
-     */
-    // public function testUsers() {
+    // /**
+    //  *  This was a test function to verify the RandomUsers elements Disabled for final
+    //  */
+    // public function testUsers1() {
     //     $numberOfUsers = 7;
     //     $count = 0;
-    //     for ($j = 0; $j < 10; $j++){
-    //         $gen = new \RandomUser\Generator();
-    //         $user = $gen->getUser();
+    //     $gen = new \RandomUser\Generator();
+    //     $users = $gen->getUsers(($numberOfUsers+10));
+    //     dump($users);
+    //     for ($j = 0; $j < 120; $j++){
     //         if($count==$numberOfUsers){
     //             break;
     //         } else {
-    //             if(ctype_alpha ( $user->getFirstName() )){
-    //                 echo $user->getFirstName(). ' ';
+    //             if(ctype_alpha ( $users[$j]->getFirstName() )){
+    //                 echo $users[$j]->getFirstName(). ' ';
     //                 $count++;
     //             } else{
     //                 continue;
     //             }
-    //             echo $user->getLastName() . ', ';
+    //             echo $users[$j]->getLastName() . ', ';
     //             // need to check for flags of what user info is sought
     //             //if (genderFlag){ setGender; } .....
-    //             echo $user->getGender() . ', ';
-    //             echo $user->getDateOfBirth() . '<br>'; //need to format this
-    //             echo $user->getUsername() . ', ';
-    //             echo $user->getPhone() . ', ';
-    //             echo $user->getRegistered() . ', ';
-    //             echo $user->getSalt() . '<br><br>';
+    //             echo $users[$j]->getGender() . ', ';
+    //             echo $users[$j]->getDateOfBirth() . '<br>'; //need to format this
+    //             echo $users[$j]->getUsername() . ', ';
+    //             echo $users[$j]->getPhone() . ', ';
+    //             echo $users[$j]->getRegistered() . ', ';
+    //             echo $users[$j]->getSalt() . '<br><br>';
     //
     //             //add lorem ipsum bio sentence about user
     //         }
     //     }
     // }
+    // /**
+    //  *  This was a test function to verify the RandomUsers elements Disabled for final
+    //  */
+    // public function testUsers2() {
+    //     $numberOfUsers = 7;
+    //     $count = 0;
+    //     $gen = new \RandomUser\Generator();
+    //     $foousers = $gen->getUsers(($numberOfUsers+10));
+    //     foreach($foousers as $foouser) {
+    //         $barusers[] = $foouser->getUsername();
+    //         $barusers[] = $foouser->getCell();
+    //         $barusers[] = '<br>';
+    //     }
+    //     var_dump($barusers);
+    //     dump($barusers[6]);
+    //     $users = array();
+    //     dump($users);
+    // }
+
 
 }
