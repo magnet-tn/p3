@@ -23,7 +23,7 @@ class LoremIpsumController extends Controller
 
         # Validate the request....
         $this->validate($request,[
-            'unitQty' => 'required|integer|min:1|max:20'
+            'unitQty' => 'required|integer|min:1|max:100'
         ]);
         $unitQty = $request->input('unitQty');
         $unitType = $request->input('unitType');

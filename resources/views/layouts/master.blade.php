@@ -19,53 +19,53 @@
     <link rel="icon" type="image/png" href="img/TroubleU-icon.png">
 
     {{-- Yield any page specific CSS files or anything else you might want in the <head> --}}
-    @yield('head')
+        @yield('head')
 
-</head>
-<body>
-    <div class='pageTop'>
-        <section>
-            {{-- Page headline will be yielded here --}}
-            @yield('headline')
-        </section>
+    </head>
+    <body>
+        <div class='pageTop'>
+            <section>
+                {{-- Page headline will be yielded here --}}
+                @yield('headline')
+            </section>
 
-        <div class="row">
-            <div class="col-md-2">
-                <header>
-                    <a href='/'>
-                    <img
-                    src='/img/logo.png'
-                    alt='TroubleU Logo'
-                    width='100px'
-                    class='logo'>
-                    </a>
-                </header>
-            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <header>
+                        <a href='/'>
+                            <img
+                            src='/img/logo.png'
+                            alt='TroubleU Logo'
+                            width='100px'
+                            class='logo'>
+                        </a>
+                    </header>
+                </div>
 
-            <div class="col-md-4">
-                <nav>
-                    <ul>
+                <div class="col-md-4">
+                    <nav>
+                        <ul>
                             <li><a href='/lorem'>&rarr; Lorem Ipsum Generator</a></li>
                             <li><a href='/user'>&rarr; Random User Generator</a></li>
-                    </ul>
-                </nav>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
 
-    <section>
-        {{-- Main page content will be yielded here --}}
-        @yield('content')
-    </section>
+        <section>
+            {{-- Main page content will be yielded here --}}
+            @yield('content')
+        </section>
 
-    <footer>
-     &copy; {{ date('Y') }} &nbsp;&nbsp;
-     <a href='https://github.com/magnet-tn/p3' target='_blank'><i class='fa fa-github'></i> View on Github</a> &nbsp;&nbsp;
-     <a href='http://p3.troubleu.com' target='_blank'><i class='fa fa-link'></i> View Live</a>
- </footer>
+        <footer>
+            &copy; {{ date('Y') }} &nbsp;&nbsp;
+            <a href='https://github.com/magnet-tn/p3' target='_blank'><i class='fa fa-github'></i> View on Github</a> &nbsp;&nbsp;
+            <a href='http://p3.troubleu.com' target='_blank'><i class='fa fa-link'></i> View Live</a>
+        </footer>
 
-    {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
-    @yield('body')
+        {{-- Yield any page specific JS files or anything else you might want at the end of the body --}}
+        @yield('body')
 
-</body>
-</html>
+    </body>
+    </html>
