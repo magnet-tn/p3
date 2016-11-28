@@ -24,8 +24,8 @@
                     <input type="radio" name="unitType" value="word"> Word
                 </label>
 
-                <label>How many units of text? (max 20):
-                    <input type='integer' id='unitQty' name='unitQty' value='{{ old("unitQty") }}' min="1" max="20">
+                <label>How many units of text? (max 100):
+                    <input type='integer' id='unitQty' name='unitQty' value='{{ old("unitQty") }}' min="1" max="100">
                 </label></br>
 
                 @if(count($errors) > 0)

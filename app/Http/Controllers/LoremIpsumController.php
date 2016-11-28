@@ -23,7 +23,7 @@ class LoremIpsumController extends Controller
 
         # Validate the request....
         $this->validate($request,[
-            'unitQty' => 'required|integer|min:1|max:100'
+            'unitQty' => 'required|integer|min:1|max:20'
         ]);
         $unitQty = $request->input('unitQty');
         $unitType = $request->input('unitType');
@@ -52,27 +52,27 @@ class LoremIpsumController extends Controller
     /**
     * To be disabled when completed. Inserted to test joshtronic Lorem Ipsum package
     */
-    public function testLorem($qty,$type)
-    {
-
-        # Generate the lorem ipsum text
-        $howManyUnits = $qty;
-        $lorem = new joshtronic\LoremIpsum();
-        if($type == "w") {
-            $text = $lorem->words($qty,'p');
-            echo $qty.' word(s): ' . $text;
-        }
-        if($type == "s") {
-            $text = $lorem->sentences($qty,'p');
-            echo $qty.' sentence(s): ' . $text;
-        }
-
-        if($type == "p") {
-            $text = $lorem->paragraphs($qty,'p');
-            echo $qty.' paragraph(s): ' . $text;
-        }
-
-    }
+    // public function testLorem($qty,$type)
+    // {
+    //
+    //     # Generate the lorem ipsum text
+    //     $howManyUnits = $qty;
+    //     $lorem = new joshtronic\LoremIpsum();
+    //     if($type == "w") {
+    //         $text = $lorem->words($qty,'p');
+    //         echo $qty.' word(s): ' . $text;
+    //     }
+    //     if($type == "s") {
+    //         $text = $lorem->sentences($qty,'p');
+    //         echo $qty.' sentence(s): ' . $text;
+    //     }
+    //
+    //     if($type == "p") {
+    //         $text = $lorem->paragraphs($qty,'p');
+    //         echo $qty.' paragraph(s): ' . $text;
+    //     }
+    //
+    // }
 
 
 
