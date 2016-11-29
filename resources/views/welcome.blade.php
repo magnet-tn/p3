@@ -27,7 +27,7 @@
 
 
     <span class="sscript">*</span><span class="footnote">Lorem ipsum is actually
-        scrambled Latin that used to mock up or stage a page of for considering
-        the graphical design, without getting distracted by actual
+        scrambled Latin that used to mock up a page, allowing designers and to
+        consider the graphical design and layout, without getting distracted by
         meaningful content.</span>
 @endsection
