@@ -1,17 +1,18 @@
 <?php
 /**
- * Insert Test
- */
+* Insert Test
+*/
 
 namespace DevelopersBF\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \joshtronic;
 
 class UserController extends Controller
 {
     /**
-     *
-     */
+    *
+    */
     public function create($users = []) {
         //return 'user form goes here';
         return view('user.create')->with('users', $users);
@@ -27,6 +28,7 @@ class UserController extends Controller
         ]);
         $userQty = $request->input('userQty');
         $address = $request->input('address');
+        $bio = $request->input('bio');
         $gender = $request->input('gender');
         $dob = $request->input('dob');
         $username = $request->input('username');
@@ -52,6 +54,10 @@ class UserController extends Controller
                     if ($address) {
                         $users[$count]['address'] = title_case( $rndUsers[$j]->getStreetAddress(). ' / ' .$rndUsers[$j]->getCity(). ' / ' .$rndUsers[$j]->getState(). ' / ' .$rndUsers[$j]->getZip() );
                     }
+                    if ($bio) {
+                        $lorem = new joshtronic\LoremIpsum();
+                        $users[$count]['bio'] = $lorem->sentence();
+                    }
                     if ($gender) {
                         $users[$count]['gender'] = $rndUsers[$j]->getGender();
                     }
@@ -76,6 +82,7 @@ class UserController extends Controller
         //  # Display the results...
         return view('user.create',[
             'users' => $users,
+            'userQty' => $userQty
         ]);
     }
     // /**

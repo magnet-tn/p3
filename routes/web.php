@@ -11,23 +11,17 @@
 |
 */
 
-# Show a form to create lorem ipsum text
+# form to create lorem ipsum text
 Route::get('/lorem', 'LoremIpsumController@create')->name('lorem.create');
 
 # Show lorem text
 Route::post('/lorem', 'LoremIpsumController@generateLorem');
 
-# Show a form to create user information
+# form to create user information
 Route::get('/user', 'UserController@create')->name('user.create');
 
 # Show user information
 Route::post('/user', 'UserController@generateUsers');
-
-// # Show a test user information - commented out for final
-// Route::get('/testusers1', 'UserController@testUsers1')->name('testusers1');
-//
-// # Show a test user information - commented out for final
-// Route::get('/testusers2', 'UserController@testUsers2')->name('testusers2');
 
 # Show a test lorem text
 Route::get('/testlorem/{qty}/{type}', 'LoremIpsumController@testLorem')->name('testlorem');

@@ -49,17 +49,13 @@
 
         </form>
     </div>
-
-    <div class="col-md-8">
-        @if(isset($loremUnits))
-        <div id="lorem text">
-            @foreach($loremUnits as $loremUnit)
-            <p>{{ $loremUnit }}</p>
-            @endforeach
-        </div>
-        @endif
-    </div>
-
 </div>
-
+<div class="col-md-8">
+    @if(isset($text))
+    <div id="lorem text">
+        <?php echo "<strong>".$unitQty." ".$unitType."s: </strong><br/>" ?>
+        <?php echo $text ?>
+    </div>
+    @endif
+</div>
 @endsection
