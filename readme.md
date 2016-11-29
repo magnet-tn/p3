@@ -24,7 +24,7 @@ Produces several user object properties. The application accepts the following u
 I hope you enjoy the application.
 
 ## Demo
-<http://www.screencast.com/t/7ZTd7vl2pjrs>
+<http://www.screencast.com/t/whCZoVrhv>
 
 
 ## Details for teaching team
