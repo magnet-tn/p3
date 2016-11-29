@@ -45,8 +45,8 @@
                 <div class="col-md-4">
                     <nav>
                         <ul>
-                            <li><a href='/lorem'>&rarr; Lorem Ipsum Generator</a></li>
-                            <li><a href='/user'>&rarr; Random User Generator</a></li>
+                            <li><a href='/lorem'>&rarr; <strong>Lorem Ipsum Generator</strong></a></li>
+                            <li><a href='/user'>&rarr; <strong>Random User Generator</strong></a></li>
                         </ul>
                     </nav>
                 </div>
