@@ -50,6 +50,15 @@ footer {
 }
 /* End Sticky Footer */
 
+.footnote {
+    font-size: smaller;
+    font-weight: bolder;
+
+}
+
+.sscript {
+    vertical-align: top;
+}
 
 .logo {
     max-width:300px;
