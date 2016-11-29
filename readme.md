@@ -61,7 +61,7 @@ There are several packages used to make DevelopersBF work:
 
 #### Susan Buck's Foobooks.css from Foobooks class example
 * <https://github.com/susanBuck/foobooks/blob/master/public/css/foobooks.css>
-* In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted below) with layout help from foobooks.css
+* In the interest of time and focus on the key elements, this project relies on css Milligram CSS Framework (noted above) with layout help from foobooks.css
 
 #### Laravel Version Info
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
