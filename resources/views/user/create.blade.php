@@ -74,7 +74,10 @@
         <div class="row">
 
             <div id="Users">
-                <p><strong>Random Users Listing: </strong>(<?php echo $userQty." Users)" ?></p>
+                @if(isset($userQty))
+                    <p><strong>Random Users Listing: </strong>
+                        ({{ $userQty }}Users)</p>
+                @endif
                 @foreach($users as $user)
                 <p> <span class="fullname">{{ $user['name'] }}</span>
                     @if(isset($user['gender']))

@@ -80,9 +80,8 @@ class UserController extends Controller
             }
         }
         //  # Display the results...
-        return view('user.create',[
-            'users' => $users,
-            'userQty' => $userQty
+        return view('user.create')->with(['users' => $users,
+                                       'userQty' => $userQty
         ]);
     }
     // /**
