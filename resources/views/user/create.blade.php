@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-&nbsp; &nbsp;<a href="/">Home</a>
+&nbsp; &nbsp;<a href="/"><img alt="Home" src="/img/home-512.png" width="15"></a>
 
 @section('title', 'User Data Generator')
 
