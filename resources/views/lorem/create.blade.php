@@ -1,5 +1,8 @@
 @extends('layouts.master')
-&nbsp; &nbsp;<a href="/"><img alt="Home" src="/img/home_512.png" width="15"></a>
+
+&nbsp; &nbsp;<a class="home" href="/"><img alt="Home" src="/img/home_512.png" width="15"
+onmouseover="this.src='/img/home_512_gray.png'" onmouseout="this.src='/img/home_512.png'"></a>
+
 @section('title', 'Lorem Ipsum Generator')
 
 @section('headline')

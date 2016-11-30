@@ -102,6 +102,10 @@ Forms
     list-style-type: none;
 }
 
+.home:hover {
+    background-image: url("/img/home_512_gray.png");
+    width: 15px;
+}
 
 label {
     margin-top:10px;
