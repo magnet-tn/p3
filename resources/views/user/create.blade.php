@@ -32,7 +32,7 @@
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
                 <label>Users: (max 100)
-                    <input type='integer' name='userQty' value='{{ old("userQty") }}' min="1" max="100">
+                    <input type='number' name='userQty' value='{{ old("userQty") }}' min="1" max="100">
                 <label>
 
                 @if(count($errors) > 0)
