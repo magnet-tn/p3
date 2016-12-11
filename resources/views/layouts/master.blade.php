@@ -28,12 +28,9 @@
                 {{-- Page headline will be yielded here --}}
                 @yield('headline')
             </section>
-
+        </div>
 
         <section>
-
-
-
             <div class="row">
                 <div class="col-md-2">
                     <header>
@@ -56,7 +53,7 @@
                     </nav>
                 </div>
             </div>
-        </div>
+
 
             {{-- Main page content will be yielded here --}}
             @yield('content')
