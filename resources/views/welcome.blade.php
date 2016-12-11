@@ -25,6 +25,11 @@
 
 @endsection
 
+@section('content')
+    <h6></h6>
+@endsection
+
+
 @section('body')
 <div>
     <span class="footnote"><span class="sscript">*</span>Lorem ipsum is actually
@@ -32,5 +37,4 @@
         consider the graphical design and layout, without getting distracted by
         meaningful content.</span>
     </div>
-
-@endsection
+    @endsection
