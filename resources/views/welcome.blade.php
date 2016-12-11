@@ -25,11 +25,12 @@
 
 @endsection
 
-@section('content')
-<hr>
-    <span class="sscript">*</span><span class="footnote">Lorem ipsum is actually
+@section('body')
+<div>
+    <span class="footnote"><span class="sscript">*</span>Lorem ipsum is actually
         scrambled Latin that used to mock up a page, allowing designers and to
         consider the graphical design and layout, without getting distracted by
         meaningful content.</span>
+    </div>
 
 @endsection

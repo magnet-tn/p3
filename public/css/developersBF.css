@@ -35,7 +35,7 @@ html {
     min-height:100%;
 }
 body {
-    margin:0 0 100px; /* bottom = footer height */
+    margin:0 25px 100px; /* bottom = footer height */
 }
 
 footer {
@@ -53,7 +53,6 @@ footer {
 .footnote {
     font-size: smaller;
     font-weight: bolder;
-
 }
 
 .sscript {
