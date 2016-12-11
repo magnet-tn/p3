@@ -32,7 +32,7 @@
 
                 <label for="userQty">Choose how many users to generate: (max 100)</label>
                 <input
-                    type='number' name='userQty'id='userQty'
+                    type='number' name='userQty' id='userQty'
                     value='{{ old("userQty") }}' min="1" max="100"
                     placeholder="1-100"
                 >
@@ -71,7 +71,7 @@
 
                         <label>
                             <input name="password" type="checkbox"> Password
-                        </label></br>
+                        </label><br/>
                     </div>
                 </div>
                 <input type='submit' value='Generate Users'>
