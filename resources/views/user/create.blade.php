@@ -24,16 +24,18 @@
 
 
             <h2>Select Data to Include</h2>
-            <p>Choose how many users to generate</p>
 
             <form method='POST' action='/user'>
 
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-                <label>Users: (max 100)
-                    <input type='number' name='userQty' value='{{ old("userQty") }}' min="1" max="100">
-                <label>
+                <label for="userQty">Choose how many users to generate: (max 100)</label>
+                <input
+                    type='number' name='userQty'id='userQty'
+                    value='{{ old("userQty") }}' min="1" max="100"
+                    placeholder="1-100"
+                >
 
                 @if(count($errors) > 0)
                     <ul class="val-error">
@@ -73,8 +75,6 @@
                     </div>
                 </div>
                 <input type='submit' value='Generate Users'>
-
-
             </form>
         </div>
     </div>
