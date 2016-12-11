@@ -12,7 +12,7 @@
         and users to test your web applications.</p>
 
 
-    <h4>Ipsum Lorem<span class="sscript">*</span></sup> Generator</h4>
+    <h4>Lorem Ipsum<span class="sscript">*</span> Generator</h4>
 
     <p>Uses Joshtronic API to generate lorem filler text in
         denominations of paragraphs, sentences or words.</p>
@@ -26,7 +26,7 @@
 @endsection
 
 @section('content')
-
+<hr>
     <span class="sscript">*</span><span class="footnote">Lorem ipsum is actually
         scrambled Latin that used to mock up a page, allowing designers and to
         consider the graphical design and layout, without getting distracted by

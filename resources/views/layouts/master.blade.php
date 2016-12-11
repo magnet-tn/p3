@@ -36,7 +36,7 @@
                             <img
                             src='/img/logo.png'
                             alt='TroubleU Logo'
-                            width='100px'
+                            width='100'
                             class='logo'>
                         </a>
                     </header>
