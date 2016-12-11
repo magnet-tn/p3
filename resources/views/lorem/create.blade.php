@@ -34,7 +34,7 @@
                     <input type="radio" name="unitType" value="sentence"> Sentence
                     <input type="radio" name="unitType" value="word"> Word
 
-                <label>How many units of text would you like?<br/>
+                <label>How many units of text would you like?<br/></label>
 
                     <div class="row">
                         <div class="col-md-2">
@@ -42,7 +42,6 @@
                             <input type='integer' id='unitQty'
                             name='unitQty' value='{{ old("unitQty") }}' min="1" max="100" placeholder="1-100">
                         </div>
-                    </label>
                     <div class="col-md-4">
                         @if(count($errors) > 0)
                         <ul class="val-error">
