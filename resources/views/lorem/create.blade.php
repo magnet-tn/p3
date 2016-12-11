@@ -30,11 +30,9 @@
                 {{ csrf_field() }}
                 <!-- <input type='hidden' value='{{ csrf_token() }}' name='_token'> -->
 
-                <label>
                     <input type="radio" name="unitType" value="paragraph" checked> Paragraph
                     <input type="radio" name="unitType" value="sentence"> Sentence
                     <input type="radio" name="unitType" value="word"> Word
-                </label>
 
                 <label>How many units of text would you like?<br/>
 
