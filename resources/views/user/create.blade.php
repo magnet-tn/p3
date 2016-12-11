@@ -1,12 +1,19 @@
 @extends('layouts.master')
 
-&nbsp; &nbsp;<a class="home" href="/"><img alt="Home" src="/img/home_512.png" width="15"
-onmouseover="this.src='/img/home_512_gray.png'" onmouseout="this.src='/img/home_512.png'"></a>
+@section('title')
+    User Data Generator
+@endsection
 
-@section('title', 'User Data Generator')
+@section('home')
+    &nbsp; &nbsp;
+    <a class="home" href="/">
+        <img alt="Home" src="/img/home_512.png" width="15"
+        onmouseover="this.src='/img/home_512_gray.png'" onmouseout="this.src='/img/home_512.png'">
+    </a>
+@endsection
 
 @section('headline')
-<h1> @yield('title')</h1>
+    <h1> @yield('title')</h1>
 @endsection
 
 @section('content')
