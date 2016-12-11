@@ -39,8 +39,7 @@
                     <div class="row">
                         <div class="col-md-2">
 
-                            <input type='integer' id='unitQty'
-                            name='unitQty' value='{{ old("unitQty") }}' min="1" max="100" placeholder="1-100">
+                            <input type='number' name='unitQty' value='{{ old("unitQty") }}' min="1" max="100" placeholder="1-100">
                         </div>
                     <div class="col-md-4">
                         @if(count($errors) > 0)
