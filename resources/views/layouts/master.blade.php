@@ -29,6 +29,11 @@
                 @yield('headline')
             </section>
 
+
+        <section>
+
+
+
             <div class="row">
                 <div class="col-md-2">
                     <header>
@@ -53,7 +58,6 @@
             </div>
         </div>
 
-        <section>
             {{-- Main page content will be yielded here --}}
             @yield('content')
         </section>

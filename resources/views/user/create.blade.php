@@ -6,7 +6,7 @@ onmouseover="this.src='/img/home_512_gray.png'" onmouseout="this.src='/img/home_
 @section('title', 'User Data Generator')
 
 @section('headline')
-<h1>User Data Generator</h1>
+<h1> @yield('title')</h1>
 @endsection
 
 @section('content')

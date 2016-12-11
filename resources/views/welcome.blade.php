@@ -1,11 +1,15 @@
 @extends('layouts.master')
 
-@section('title', 'Developers BF')
+@section('title')
+    Developers BF
+@endsection
 
 
 @section('headline')
 
-    <h1>Developers BF</h1>
+    <h1> @yield('title')</h1>
+
+
 
     <p>Welcome. This is <em>Developer’s BF </em>.
         We have some tools to help you quickly create filler content
@@ -25,9 +29,6 @@
 
 @endsection
 
-@section('content')
-    <h6></h6>
-@endsection
 
 
 @section('body')
